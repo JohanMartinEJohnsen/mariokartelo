@@ -11,7 +11,7 @@ import TableRow from '@material-ui/core/TableRow';
 import members from "../data/MOCK_DATA.json";
 
 const columns = [
-    { id:'picture', label:'picutre' , minWidth: 50},
+    { id:'picture', label:'picture' , minWidth: 50},
   { id: 'name', label: 'Name', minWidth: 170 },
   
   {
@@ -21,7 +21,7 @@ const columns = [
     align: 'right',
     format: (value) => value.toLocaleString('en-US'),
   },
-  {
+  /*{
     id: 'character',
     label: 'Character',
     minWidth: 170,
@@ -34,7 +34,7 @@ const columns = [
     minWidth: 170,
     align: 'right',
     format: (value) => value.toFixed(2),
-  },
+  },*/
 ];
 
 function createData(members){
@@ -96,11 +96,13 @@ export default function ScoreBoard() {
             {rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => {
               return (
                 <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
-                    <TableCell> <img className="tablePicture" src="https://icons.iconarchive.com/icons/ph03nyx/super-mario/256/Paper-Bowser-icon.png"/> </TableCell>
                   {columns.map((column) => {
                     const value = row[column.id];
                     return (
                       <TableCell key={column.id} align={column.align}>
+                        {((column.id === 'picture') ? true : false) && (
+                          <img className="tablePicture" src="https://icons.iconarchive.com/icons/ph03nyx/super-mario/256/Paper-Bowser-icon.png"/>
+                        )}
                         {column.format && typeof value === 'number' ? column.format(value) : value}
                       </TableCell>
                     );
@@ -112,7 +114,7 @@ export default function ScoreBoard() {
         </Table>
       </TableContainer>
       <TablePagination
-        rowsPerPageOptions={[10, 25, 100]}
+        rowsPerPageOptions={[10, 25, 60]}
         component="div"
         count={rows.length}
         rowsPerPage={rowsPerPage}
