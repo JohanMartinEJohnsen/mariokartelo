@@ -86,7 +86,7 @@ function createPlayer(name) {
 // calls createPlayer 4 times
 function create4Players() {
   players = [];
-  for (var i = 0; i < 4; i++) {
+  for (var i = 0; i < 2; i++) {
     players.push(createPlayer("player" + String(i)));
   }
   return players;
