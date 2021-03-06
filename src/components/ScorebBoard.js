@@ -101,7 +101,7 @@ export default function ScoreBoard() {
                     return (
                       <TableCell key={column.id} align={column.align}>
                         {((column.id === 'picture') ? true : false) && (
-                          <img className="tablePicture" src="https://icons.iconarchive.com/icons/ph03nyx/super-mario/256/Paper-Bowser-icon.png"/>
+                          <img className="tablePicture" src="/Characters/mario.png"/>
                         )}
                         {column.format && typeof value === 'number' ? column.format(value) : value}
                       </TableCell>
