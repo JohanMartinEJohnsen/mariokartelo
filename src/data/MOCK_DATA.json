@@ -3,13 +3,13 @@
   "name": "Erling O.",
   "email": "mseer0@miitbeian.gov.cn",
   "rating": 1712,
-  "img": "/Characters/metalmario.png"
+  "img": "Characters/metalmario.png"
 }, {
   "id": 2,
   "name": "Sanna",
   "email": "lcasaccia1@weebly.com",
   "rating": 1432,
-  "img": "/Characters/isabelle.png"
+  "img": "Characters/isabelle.png"
 }, {
   "id": 3,
   "name": "Camille",
@@ -21,43 +21,43 @@
   "name": "Nicolay",
   "email": "dmackartan3@bravesites.com",
   "rating": 1090,
-  "img": "/Characters/bowser.png"
+  "img": "Characters/bowser.png"
 }, {
   "id": 5,
   "name": "Johan",
   "email": "dyglesias4@hibu.com",
   "rating": 1088,
-  "img": "/Characters/morton.png"
+  "img": "Characters/morton.png"
 }, {
   "id": 6,
   "name": "Martine",
   "email": "epaslow5@opera.com",
   "rating": 867,
-  "img": "/Characters/roy.png"
+  "img": "Characters/roy.png"
 }, {
   "id": 7,
   "name": "Guro",
   "email": "camerighi6@domainmarket.com",
   "rating": 763,
-  "img": "/Characters/daisy.png"
+  "img": "Characters/daisy.png"
 }, {
   "id": 8,
   "name": "Gulleik",
   "email": "aisacsson7@xinhuanet.com",
   "rating": 652,
-  "img": "/Characters/donkeykong.png"
+  "img": "Characters/donkeykong.png"
 }, {
   "id": 9,
   "name": "Andreas R.",
   "email": "cpeyto8@wikispaces.com",
   "rating": 99,
-  "img": "/Characters/Greenyoshi.png"
+  "img": "Characters/Greenyoshi.png"
 }, {
   "id": 10,
   "name": "Snorre",
   "email": "alangthorn9@bing.com",
   "rating": -5,
-  "img": "/Characters/drybowser.png"
+  "img": "Characters/drybowser.png"
 }, {
   "id": 11,
   "name": "Jeramie",

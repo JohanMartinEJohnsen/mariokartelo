@@ -89,7 +89,7 @@ function ScoreBoard(){
 
 
 const columns = [
-    { id:'picture', label:'Picture' , minWidth: 50},
+    { id:'picture', label:'Main' , minWidth: 50},
   { id: 'name', label: 'Name', minWidth: 100 },
   
   {
