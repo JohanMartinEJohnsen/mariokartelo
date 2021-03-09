@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# Mariocart elo rating system
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This Project has been developed by:
+```
+Gulleik L Olsen          gulleik.olsen@startntnu.no        Software Engineer @ Gutta Consulting
+Johan M E Johnsen        johan.johnsen@startntnu.no        Software Engineer @ Gutta Consulting
+Erling F Olweus          erling.olweus@startntnu.no        Software Engineer @ Gutta Consulting
+```
 
-## Available Scripts
 
-In the project directory, you can run:
+## Project description
+**This website was created to provide a ranking system for mario cart in Start NTNU**  
+The project has been implemented with the following criteria:
 
-### `npm start`
+  - **Players skill should be calculated using the Elo Algorithm**  
+     One can read about the ELO algorithm here: https://en.wikipedia.org/wiki/Elo_rating_system.
+  - **The website should be intuitive, minimalistic and easy to use**  
+     The basics.
+  - **All players should be able to change their main on the website**  
+     In the first itteration this will be the only possible way to edit your profile
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Usage
+**Prerequisites for running the program**
+- Check the package.json file (install everything needed)
+- run "npm start" in terminal
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+## Our system
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### APP.js
+The main application
 
-### `npm run build`
+### Scoring_functions.js
+Functions for editing a player score based on a match
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### datagreier.js
+Johan / erling vet
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
