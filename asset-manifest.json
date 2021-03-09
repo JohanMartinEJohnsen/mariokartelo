@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/mariokartelo/static/css/main.442f1c7f.chunk.css",
+    "main.js": "/mariokartelo/static/js/main.fad6d05a.chunk.js",
+    "main.js.map": "/mariokartelo/static/js/main.fad6d05a.chunk.js.map",
+    "runtime-main.js": "/mariokartelo/static/js/runtime-main.4b0eb901.js",
+    "runtime-main.js.map": "/mariokartelo/static/js/runtime-main.4b0eb901.js.map",
+    "static/css/2.b6e60341.chunk.css": "/mariokartelo/static/css/2.b6e60341.chunk.css",
+    "static/js/2.7c5c4b7e.chunk.js": "/mariokartelo/static/js/2.7c5c4b7e.chunk.js",
+    "static/js/2.7c5c4b7e.chunk.js.map": "/mariokartelo/static/js/2.7c5c4b7e.chunk.js.map",
+    "static/js/3.b1f261c2.chunk.js": "/mariokartelo/static/js/3.b1f261c2.chunk.js",
+    "static/js/3.b1f261c2.chunk.js.map": "/mariokartelo/static/js/3.b1f261c2.chunk.js.map",
+    "index.html": "/mariokartelo/index.html",
+    "static/css/2.b6e60341.chunk.css.map": "/mariokartelo/static/css/2.b6e60341.chunk.css.map",
+    "static/css/main.442f1c7f.chunk.css.map": "/mariokartelo/static/css/main.442f1c7f.chunk.css.map",
+    "static/js/2.7c5c4b7e.chunk.js.LICENSE.txt": "/mariokartelo/static/js/2.7c5c4b7e.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/mariokartelo/static/media/logo.6ce24c58.svg",
+    "static/media/index.css": "/mariokartelo/static/media/mario_kart_f2.0651abbb.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4b0eb901.js",
+    "static/css/2.b6e60341.chunk.css",
+    "static/js/2.7c5c4b7e.chunk.js",
+    "static/css/main.442f1c7f.chunk.css",
+    "static/js/main.fad6d05a.chunk.js"
+  ]
+}
