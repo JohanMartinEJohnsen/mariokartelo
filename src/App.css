@@ -1,7 +1,8 @@
 .App {
-  text-align: center;
   display: flex;
   width: fit-content;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .App-logo {
@@ -42,4 +43,20 @@
 .tablePicture{
   width: 50px;
   height:auto;
+}
+
+.appWrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+
+}
+
+.button{
+  display:flex;
+  width: 50%;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom:40px;
 }
