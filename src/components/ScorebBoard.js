@@ -90,7 +90,7 @@ function ScoreBoard(){
 
 const columns = [
     { id:'picture', label:'Picture' , minWidth: 50},
-  { id: 'name', label: 'Name', minWidth: 170 },
+  { id: 'name', label: 'Name', minWidth: 100 },
   
   {
     id: 'rating',
@@ -99,20 +99,6 @@ const columns = [
     align: 'right',
     format: (value) => value.toLocaleString('en-US'),
   },
-  /*{
-    id: 'character',
-    label: 'Character',
-    minWidth: 170,
-    align: 'right',
-    format: (value) => value.toLocaleString('en-US'),
-  },
-  {
-    id: 'kart',
-    label: 'Kart',
-    minWidth: 170,
-    align: 'right',
-    format: (value) => value.toFixed(2),
-  },*/
 ];
 
 function createData(members){

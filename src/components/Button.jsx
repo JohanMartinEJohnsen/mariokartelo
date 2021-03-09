@@ -22,8 +22,8 @@ function RegisterGame(){
     input: "select",
     inputOptions: names,
     backdrop: `
-    rgba(0,0,123,0.4)
-    url("https://media.giphy.com/media/FMapondVtL2Fi/giphy.gif")
+    rgba(11,163,216,0.4)
+    url("http://pa1.narvii.com/6688/6ff062afd890df9fd7135e6090983e1b3ac2c9e5_00.gif")
     left top
     no-repeat`
     
@@ -31,20 +31,32 @@ function RegisterGame(){
   {
     title: 'Hvem fikk andre plass?',
     input: "select",
-    inputOptions: names
+    inputOptions: names,
+    backdrop: 
+    `
+    rgba(11,163,216,0.4)
+    url("https://4.bp.blogspot.com/-9NjYtb9BGuw/WYKAGbNFZoI/AAAAAAABC_0/7ZQSM_ZAtOMY-l9HzoDP4nKuvle-AtV1gCLcBGAs/s1600/AS002913_13.gif")
+    left top
+    no-repeat`
   },
   {
     title: 'Hvem fikk tredje plass?',
     input: "select",
-    inputOptions: names
+    inputOptions: names,
+    backdrop: 
+    `
+    rgba(11,163,216,0.4)
+    url("https://1.bp.blogspot.com/-exbls8ggUng/WYKAHws-K0I/AAAAAAABDAA/0jYXa_Kit2gUzZTiaPsEYVCO8K2CGeFJwCLcBGAs/s1600/AS002913_16.gif")
+    left top
+    no-repeat`
   },{
     title: 'Hvem fikk fjerde plass?',
     input: "select",
     inputOptions: names,
     backdrop: 
     `
-    rgba(0,0,123,0.4)
-    url("https://mario.wiki.gallery/images/thumb/6/67/MK8-Line-Luigi-Blooper.gif/200px-MK8-Line-Luigi-Blooper.gif")
+    rgba(11,163,216,0.4)
+    url("https://thumbs.gfycat.com/AccomplishedPoliteJackal-max-1mb.gif")
     left top
     no-repeat`
     

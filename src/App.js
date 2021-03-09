@@ -4,16 +4,19 @@ import ScoreBoard from "./components/ScorebBoard";
 import RegisterGame from "./components/RegisterGame";
 import SortableScoreBoard from "./components/SortableScoreBoard";
 import Button from "./components/Button";
+import Header from "./components/Header";
 
 function App() {
   return (
+
   <div className="appWrapper">
-    <ScoreBoard/>
+    <Header/>
+    <ScoreBoard className="scoreBoard"/>
     <Button/>
     
     
   </div>
-    
+ 
   );
 }
 
