@@ -61,7 +61,7 @@ function ScoreBoard(){
                     return (
                       <TableCell key={column.id} align={column.align}>
                         {((column.id === 'picture') ? true : false) && (
-                          <img className="tablePicture" src="/Characters/mario.png"/>
+                          <img className="tablePicture" src={row.img} onClick={()=> console.log(JSON.stringify(row))}/>
                         )}
                         {column.format && typeof value === 'number' ? column.format(value) : value}
                       </TableCell>

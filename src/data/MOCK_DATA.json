@@ -1,53 +1,63 @@
 [{
   "id": 1,
-  "name": "Micaela",
+  "name": "Erling O.",
   "email": "mseer0@miitbeian.gov.cn",
-  "rating": 403
+  "rating": 1712,
+  "img": "/Characters/metalmario.png"
 }, {
   "id": 2,
-  "name": "Laird",
+  "name": "Sanna",
   "email": "lcasaccia1@weebly.com",
-  "rating": 884
+  "rating": 1432,
+  "img": "/Characters/isabelle.png"
 }, {
   "id": 3,
-  "name": "Morgan",
+  "name": "Camille",
   "email": "mkienl2@gravatar.com",
-  "rating": 1251
+  "rating": 1251,
+  "img": "Characters/peach.png"
 }, {
   "id": 4,
-  "name": "Dorena",
+  "name": "Nicolay",
   "email": "dmackartan3@bravesites.com",
-  "rating": 1090
+  "rating": 1090,
+  "img": "/Characters/bowser.png"
 }, {
   "id": 5,
-  "name": "Dianemarie",
+  "name": "Johan",
   "email": "dyglesias4@hibu.com",
-  "rating": 130
+  "rating": 1088,
+  "img": "/Characters/morton.png"
 }, {
   "id": 6,
-  "name": "Eamon",
+  "name": "Martine",
   "email": "epaslow5@opera.com",
-  "rating": 573
+  "rating": 867,
+  "img": "/Characters/roy.png"
 }, {
   "id": 7,
-  "name": "Cornela",
+  "name": "Guro",
   "email": "camerighi6@domainmarket.com",
-  "rating": 1700
+  "rating": 763,
+  "img": "/Characters/daisy.png"
 }, {
   "id": 8,
-  "name": "Artur",
+  "name": "Gulleik",
   "email": "aisacsson7@xinhuanet.com",
-  "rating": 1749
+  "rating": 652,
+  "img": "/Characters/donkeykong.png"
 }, {
   "id": 9,
-  "name": "Clovis",
+  "name": "Andreas R.",
   "email": "cpeyto8@wikispaces.com",
-  "rating": 99
+  "rating": 99,
+  "img": "/Characters/Greenyoshi.png"
 }, {
   "id": 10,
-  "name": "Anthony",
+  "name": "Snorre",
   "email": "alangthorn9@bing.com",
-  "rating": 1442
+  "rating": -5,
+  "img": "/Characters/drybowser.png"
 }, {
   "id": 11,
   "name": "Jeramie",
