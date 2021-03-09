@@ -1,47 +1,29 @@
 {
   "name": "mariokartelo",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "This Project has been developed by:\r ```\r Gulleik L Olsen          gulleik.olsen@startntnu.no        Software Engineer @ Gutta Consulting\r Johan M E Johnsen        johan.johnsen@startntnu.no        Software Engineer @ Gutta Consulting\r Erling F Olweus          erling.olweus@startntnu.no        Software Engineer @ Gutta Consulting\r ```",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohanMartinEJohnsen/mariokartelo.git"
+  },
+  "author": "Erling Olweus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JohanMartinEJohnsen/mariokartelo/issues"
+  },
+  "homepage": "https://github.com/JohanMartinEJohnsen/mariokartelo#readme",
   "dependencies": {
-    "@apollo/client": "^3.3.11",
-    "@material-ui/core": "^4.11.3",
-    "@testing-library/jest-dom": "^5.11.9",
-    "@testing-library/react": "^11.2.5",
-    "@testing-library/user-event": "^12.8.1",
-    "apollo-server": "^2.21.0",
+    "@prisma/client": "^2.18.0",
     "express": "^4.17.1",
     "express-graphql": "^0.12.0",
-    "graphql": "^15.5.0",
-    "lodash": "^4.17.21",
-    "react": "^17.0.1",
-    "react-awesome-button": "^6.5.1",
-    "react-dom": "^17.0.1",
-    "react-scripts": "^4.0.3",
-    "sweetalert2": "^10.15.5",
-    "web-vitals": "^1.1.0"
+    "graphql": "^15.5.0"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "prisma": "^2.18.0"
   }
 }
