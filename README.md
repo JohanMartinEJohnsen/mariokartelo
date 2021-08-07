@@ -21,7 +21,8 @@ The project has been implemented with the following criteria:
 
 ## Usage
 **Prerequisites for running the program**
-- Check the package.json file (install everything needed)
+- Download and install node.js
+- run npm install package.json file (install everything needed)
 - run "npm start" in terminal
 
 

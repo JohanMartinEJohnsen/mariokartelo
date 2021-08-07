@@ -1,13 +1,12 @@
 var EloRating = require('elo-rating');
 
-
 // Demo 
 
-players = create4Players()
-players[1]['Rating'] = 1400
-console.log(players)
-console.log(calcWinProbs(players));
-console.log(updateScore(players));
+// players = create4Players()
+// players[1]['Rating'] = 1400
+// console.log(players)
+// console.log(calcWinProbs(players));
+// console.log(updateScore(players));
 
 
 
@@ -20,8 +19,11 @@ console.log(updateScore(players));
  - k; is the sensitivity of the scoring function, higher k => bigger scorechanges. Deafult = 40
  returns the list of players with updated ratings
 */
-function updateScore(players, draw = null, k = 40){
-  numPlayers = players.length;
+function updateScore(answers, users, draw = null, k = 40){
+  
+  answers = CreateDictionaryWithScores(answers, users)
+  const numPlayers = answers.length;
+
   if(draw == null){
     draw = []
     for(var i=0;i< numPlayers; i++){
@@ -29,11 +31,12 @@ function updateScore(players, draw = null, k = 40){
     }
   }
   
-  score = calcScore(players, draw);
-  for(var player=0; player < numPlayers; player++){
-    players[player]['Rating'] = players[player]['Rating'] + k * score[player];
+  const score = calcScore(answers, draw);
+  for(var player = 0; player < numPlayers; player++){
+    answers[player].rating = answers[player].rating + k * score[player];
   }
-  return players;
+  
+  return answers;
 }
 
 /* Function to calculate win probabilities
@@ -41,18 +44,17 @@ function updateScore(players, draw = null, k = 40){
  returns the list of probabilities of player with that given index to be placed first. the probabilites should sum to one.
 */
 function calcWinProbs(players){
-  winProbs = [];
-  winProbSum = 0;
-  numPlayers = players.length;
+  const winProbs = [];
+  var winProbSum = 0;
+  const numPlayers = players.length;
   if(numPlayers > 4){
-    print("WinProbability can be calculated for maximum 4 players");
-    return -1;
+    throw console.error("WinProbability can be calculated for maximum 4 players");
   }
   for(var player = 0; player < numPlayers; player++){
-    winProb = 1;
+    var winProb = 1;
     for(var oponent = 0; oponent < numPlayers; oponent++){
-      if(player !=  oponent){
-        winProb *= EloRating.expected(players[player]['Rating'], players[oponent]['Rating']);
+      if(player !==  oponent){
+        winProb *= EloRating.expected(players[player].rating, players[oponent].rating);
       }
     }
     winProbs.push(winProb);
@@ -69,23 +71,29 @@ function calcWinProbs(players){
 // Creates a new player with a score of 1000
 function createPlayer(name) {
   name = name.split(" ");
-  firstName = name[0];
-  if (name.length == 1){
-    lastName = ""
+  const firstName = name[0];
+  if (name.length === 1){
+    const lastName = ""
+    var dict = {
+      "name": firstName + " " + lastName,
+      "rating": 1000
+    };
+    return dict  
   }else{
-    lastName = name[name.length -1];
+    const lastName = name[name.length -1];
+    var dict = {
+      "name": firstName + " " + lastName,
+      "rating": 1000
+    };
+    return dict  
   }
       
-  var dict = {
-      "Name": firstName + " " + lastName,
-      "Rating": 1000
-    };
-    return dict   
+   
 }
 
 // calls createPlayer 4 times
 function create4Players() {
-  players = [];
+  const players = [];
   for (var i = 0; i < 4; i++) {
     players.push(createPlayer("player" + String(i)));
   }
@@ -99,18 +107,17 @@ function create4Players() {
 
 // Calculates player expected score based on ranking and ranking of oponents
 function calcExpectedScore(players){
-  expScores = [];
-  numPlayers = players.length;
+  const expScores = [];
+  const numPlayers = players.length;
   if(numPlayers > 4){
-    print("WinProbability can be calculated for maximum 4 players");
-    return -1;
+    throw console.error("WinProbability can be calculated for maximum 4 players");
   }
 
   for(var player = 0; player < numPlayers; player++){
-    expScore = 0;
+    var expScore = 0;
     for(var oponent = 0; oponent < numPlayers; oponent++){
-      if(player !=  oponent){
-        expScore += EloRating.expected(players[player]['Rating'], players[oponent]['Rating']);
+      if(player !==  oponent){
+        expScore += EloRating.expected(players[player].rating, players[oponent].rating);
       }
     }
     expScores.push(expScore);
@@ -131,39 +138,39 @@ function countTrue(array){
 
 // Calculates player score based on results from match
 function calcActualScore(players, draw){
-  numPlayers = players.length;
-  actScores = [];
+  const numPlayers = players.length;
+  var actScores = [];
   if(draw.includes(true)){
     var numTrue = countTrue(draw);
-    if(numTrue == 2){
-      if(numPlayers == 2){
+    if(numTrue === 2){
+      if(numPlayers === 2){
         actScores = [0.5, 0.5];
-      }else if(numPlayers == 3){
-        if(draw[0] == true){
+      }else if(numPlayers === 3){
+        if(draw[0] === true){
           actScores = [2, 0.5, 0.5];
         }else{
           actScores = [1.5, 1.5, 0];
         }
       }else{
-        if(draw[0] == true){
+        if(draw[0] === true){
           actScores = [2.5, 2.5, 1, 0];
-        }else if(draw[3] == true){
+        }else if(draw[3] === true){
           actScores = [3, 2, 0.5, 0.5];
         }else{
           actScores = [3, 1.5, 1.5, 0];
         }
       }
-    }else if(numTrue == 3){
-      if(numplayers == 3){
+    }else if(numTrue === 3){
+      if(numPlayers === 3){
         actScores = [1, 1, 1];
       }else{
-        if(draw[0] == true){
+        if(draw[0] === true){
           actScores = [2, 2, 2, 0];
         }else{
           actScores = [3, 1, 1, 1];
         }
       }
-    }else if(numTrue == 4){
+    }else if(numTrue === 4){
       actScores = [1.5, 1.5, 1.5, 1.5];
     }else{
       console.log("There has to be a draw between at least two players, and no more than 4 players");
@@ -179,18 +186,31 @@ function calcActualScore(players, draw){
 
 // Calculates player score based on actual and expected score
 function calcScore(players, draw){
-  numPlayers = players.length;
-  expScores = calcExpectedScore(players);
-  actScores = calcActualScore(players, draw);
-  score = [];
+  const numPlayers = players.length;
+  const expScores = calcExpectedScore(players);
+  const actScores = calcActualScore(players, draw);
+  const score = [];
   for(var i=0; i < numPlayers; i++){
     score.push(actScores[i] - expScores[i]);
   }
   return score;
 }
 
+function CreateDictionaryWithScores(players, users){
+  const UsersWithScore = []
+  for (var i = 0; i < players.length; i++){
+    const player = players[i]
+    for (var j = 0; j < users.length; j++){
+      if (users[j].name === player){
+        UsersWithScore.push({ "name": users[j].name, 'rating': users[j].rating})
+      }
 
+    }
+  }
+  return UsersWithScore
+}
 
+export default updateScore
 
 
 

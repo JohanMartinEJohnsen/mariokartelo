@@ -1,16 +1,18 @@
 import { AwesomeButton } from "react-awesome-button";
+import axios from 'axios'
 import "react-awesome-button/dist/styles.css";
 //import RegisterGame from "./RegisterGame";
 import Swal from "sweetalert2";
-import members from "../data/MOCK_DATA.json";
+//import members from "../data/MOCK_DATA.json";
+import updateScore from "../Scoring_functions"
 
-function Button() {
-  return <AwesomeButton type="primary" className="button" onPress={()=> RegisterGame()}  >Registrer spill</AwesomeButton>;
+function Button({users}) {
+  return <AwesomeButton type="primary" className="button" onPress={()=> RegisterGame(users)}  >Registrer spill</AwesomeButton>;
 }
 
-function RegisterGame(){
-    const names = members.map(({name})=> name);
-    names.push("ingen")
+function RegisterGame(users){
+    const names = users.map(({name}) => name);
+    names.unshift("ingen")
     Swal.mixin({
   input: 'text',
   confirmButtonText: 'Next &rarr;',
@@ -70,6 +72,11 @@ function RegisterGame(){
     answers.push(names[result.value[1]]);
     answers.push(names[result.value[2]]);
     answers.push(names[result.value[3]]);
+
+    var updated_scores = updateScore(answers, users)
+    updateScoresOnServer(updated_scores)
+    console.log('updated_scores: ' + updated_scores)
+
     const string= JSON.stringify(answers);
 
     Swal.fire({
@@ -83,5 +90,15 @@ function RegisterGame(){
   }
 })
 }
+
+function updateScoresOnServer(users){
+  const numPlayers = users.length
+  for (var player = 0; player < numPlayers; player++){
+    var url = 'http://localhost:3001/users/' + users[player].name
+    axios.patch(url, {rating: users[player].rating})
+  }
+  
+}
+
 
 export default Button;

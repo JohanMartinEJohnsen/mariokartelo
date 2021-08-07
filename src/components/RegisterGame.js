@@ -1,5 +1,3 @@
-import React from "react";
-import Button from "./Button";
 import Swal from "sweetalert2";
 // Denne er ikke i bruk lenger
 

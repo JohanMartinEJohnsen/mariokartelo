@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
 import ScoreBoard from "./components/ScorebBoard";
-import RegisterGame from "./components/RegisterGame";
-import SortableScoreBoard from "./components/SortableScoreBoard";
 import Button from "./components/Button";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import axios from 'axios';
 
-function App() {
-  return (
+class App extends Component {
+  state = { users: [] }
 
-  <div className="appWrapper">
-    <Header/>
-    <ScoreBoard className="scoreBoard"/>
-    <Button/>
-    <Footer/>
-    
-    
-  </div>
- 
-  );
+  componentDidMount() {
+    axios.get('/users')
+      .then(res => res.data)
+      .then(users => this.setState( {users} ))
+  }
+
+  render() {
+    return (
+      
+      <div className="appWrapper">
+
+        <Header/>
+        <ScoreBoard className="scoreBoard" users={this.state.users}/>
+        <Button users={this.state.users}/>
+        <Footer/>
+      </div>
+      );
+  } 
 }
+
 
 export default App;
