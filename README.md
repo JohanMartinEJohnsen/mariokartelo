@@ -23,6 +23,8 @@ The project has been implemented with the following criteria:
 **Prerequisites for running the program**
 - Download and install node.js
 - run npm install package.json file (install everything needed)
+- start the mongoose server
+- navigate to src/components and run node index.js to start the express server
 - run "npm start" in terminal
 
 
