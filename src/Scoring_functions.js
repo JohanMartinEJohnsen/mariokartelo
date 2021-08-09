@@ -1,20 +1,11 @@
 var EloRating = require('elo-rating');
 
-// Demo 
-
-// players = create4Players()
-// players[1]['Rating'] = 1400
-// console.log(players)
-// console.log(calcWinProbs(players));
-// console.log(updateScore(players));
 
 
 
 // Functions
-
-
 /* Function to update score of players
- - Players; is a list of dictionaries sorted from first to last place, the dictionaries must include a key named Rating
+ - Players; is a list of players in winning order
  - Draw; is a list of booleans in case of draw. Set draw = true for the players who are drawed. ex = [false,treu,true,false] for a draw on second place
  - k; is the sensitivity of the scoring function, higher k => bigger scorechanges. Deafult = 40
  returns the list of players with updated ratings
@@ -33,7 +24,7 @@ function updateScore(answers, users, draw = null, k = 40){
   
   const score = calcScore(answers, draw);
   for(var player = 0; player < numPlayers; player++){
-    answers[player].rating = answers[player].rating + k * score[player];
+    answers[player].rating = Math.round(answers[player].rating + k * score[player]);
   }
   
   return answers;
@@ -63,44 +54,6 @@ function calcWinProbs(players){
 
   return winProbs.map(x => x /winProbSum);
 }
-
-
-
-//Test functions
-
-// Creates a new player with a score of 1000
-function createPlayer(name) {
-  name = name.split(" ");
-  const firstName = name[0];
-  if (name.length === 1){
-    const lastName = ""
-    var dict = {
-      "name": firstName + " " + lastName,
-      "rating": 1000
-    };
-    return dict  
-  }else{
-    const lastName = name[name.length -1];
-    var dict = {
-      "name": firstName + " " + lastName,
-      "rating": 1000
-    };
-    return dict  
-  }
-      
-   
-}
-
-// calls createPlayer 4 times
-function create4Players() {
-  const players = [];
-  for (var i = 0; i < 4; i++) {
-    players.push(createPlayer("player" + String(i)));
-  }
-  return players;
-}
- 
-
 
 
 //Support functions

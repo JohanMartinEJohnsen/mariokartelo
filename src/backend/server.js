@@ -1,10 +1,10 @@
 const express = require('express')
 var cors = require('cors')
-require('../db/mongoose')
-const User = require('../models/user')
-const userRouter = require('../routers/user')
+require('./db/mongoose')
+const User = require('./models/user')
+const userRouter = require('./routers/user')
 const app = express()
-const port = process.env.PORT || 3001
+const port = process.env.PORT 
 
 
 app.use(express.json())

@@ -1,10 +1,9 @@
 import { AwesomeButton } from "react-awesome-button";
 import axios from 'axios'
 import "react-awesome-button/dist/styles.css";
-//import RegisterGame from "./RegisterGame";
 import Swal from "sweetalert2";
-//import members from "../data/MOCK_DATA.json";
 import updateScore from "../Scoring_functions"
+
 
 function Button({users}) {
   return <AwesomeButton type="primary" className="button" onPress={()=> RegisterGame(users)}  >Registrer spill</AwesomeButton>;
@@ -74,7 +73,7 @@ function RegisterGame(users){
     answers.push(names[result.value[3]]);
 
     var updated_scores = updateScore(answers, users)
-    updateScoresOnServer(updated_scores)
+    updateScoresOnServer(updated_scores, users)
     console.log('updated_scores: ' + updated_scores)
 
     const string= JSON.stringify(answers);
@@ -91,11 +90,11 @@ function RegisterGame(users){
 })
 }
 
-function updateScoresOnServer(users){
+function updateScoresOnServer(users, org_users){
   const numPlayers = users.length
   for (var player = 0; player < numPlayers; player++){
     var url = 'http://localhost:3001/users/' + users[player].name
-    axios.patch(url, {rating: users[player].rating})
+    axios.patch(url, {rating: users[player].rating, races: org_users[player].races + 1})
   }
   
 }
