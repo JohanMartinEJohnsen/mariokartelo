@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^12.8.1",
     "apollo-server": "^2.21.0",
     "axios": "^0.21.1",
+    "cors": "^2.8.5",
     "elo-rating": "^1.0.1",
     "express": "^4.17.1",
     "express-graphql": "^0.12.0",

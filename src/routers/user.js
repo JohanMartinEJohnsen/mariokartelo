@@ -40,7 +40,7 @@ router.post('/users', async (req, res) => {
 
 router.patch('/users/:name', async (req, res) => {
     const updates = Object.keys(req.body)
-    const allowedUpdates = ['name', 'score', 'races', 'img']
+    const allowedUpdates = ['name', 'rating', 'races', 'img']
     const isvalidOperation = updates.every((update) => allowedUpdates.includes(update))
 
     if (!isvalidOperation) {
