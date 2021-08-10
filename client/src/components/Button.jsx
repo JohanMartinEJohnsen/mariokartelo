@@ -93,7 +93,7 @@ function RegisterGame(users){
 function updateScoresOnServer(users, org_users){
   const numPlayers = users.length
   for (var player = 0; player < numPlayers; player++){
-    var url = 'http://localhost:3001/users/' + users[player].name
+    var url = '/users/' + users[player].name
     axios.patch(url, {rating: users[player].rating, races: org_users[player].races + 1})
   }
   
