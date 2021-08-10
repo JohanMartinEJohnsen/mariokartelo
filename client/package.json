@@ -24,7 +24,7 @@
   "proxy": "http://localhost:3001",
   "scripts": {
     "start": "react-scripts.js start",
-    "build": "NODE_ENV=production node_modules/react-scripts/bin/react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "dev": "env-cmd -f ./config/dev.env nodemon src/backend/server.js"
