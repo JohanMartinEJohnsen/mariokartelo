@@ -1,0 +1,102 @@
+.App {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: red;
+}
+
+.App-logo {
+  height: 39vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #496aac;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.tablePicture{
+  width: 50px;
+  height:auto;
+}
+
+.header{
+  font-family: mario_kart_f2;
+
+}
+
+.footer{
+  width:80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-top: 150px;
+
+
+}
+
+.sponsorContainer{
+  width: 80%;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+.sponsorPic{
+  display: flex;
+  width: auto;
+  height: 75px;
+}
+
+.scoreBoardWrapper{
+  display:flex;
+  width: 100%;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom:40px;
+}
+
+.appWrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+
+}
+
+.button{
+  display:flex;
+  width: 50%;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom:40px;
+}
+

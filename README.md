@@ -19,10 +19,17 @@ The project has been implemented with the following criteria:
   - **All players should be able to change their main on the website**  
      In the first itteration this will be the only possible way to edit your profile
 
+This is an react app runnning with a node backend. The project users a mongodb server which is to be hosted in atlas, the backend connects to this server using express. 
+
 ## Usage
 **Prerequisites for running the program**
-- Check the package.json file (install everything needed)
-- run "npm start" in terminal
+- Download and install node.js
+- run npm install package.json file (install everything needed)
+- create and start a mongoose server (https://mongoosejs.com/)
+- Create a config folder in the root directory where you add a dev.env file.
+   - Add PORT and MONGODB_URL to this file and set those values
+- run npm run dev from the root directory in order to start the dev server.
+- run "npm start" in order to start the frontend.
 
 
 ## Our system

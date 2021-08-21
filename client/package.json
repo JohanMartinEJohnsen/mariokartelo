@@ -1,26 +1,19 @@
 {
-  "name": "mariokartelo",
-  "homepage": "http://johanmartinejohnsen.github.io/mariokartelo",
+  "name": "client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@apollo/client": "^3.3.11",
     "@material-ui/core": "^4.11.3",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.1",
     "axios": "^0.21.1",
-    "cors": "^2.8.5",
     "elo-rating": "^1.0.1",
-    "express": "^4.17.1",
-    "express-graphql": "^0.12.0",
     "graphql": "^15.5.0",
     "kerberos": "^1.1.6",
-    "mongodb": "^4.1.0",
-    "mongodb-client-encryption": "^1.2.6",
-    "mongoose": "^5.13.5",
-    "nodemon": "^2.0.12",
+    "lodash": "^4.17.21",
     "package.json": "^2.0.1",
-    "path": "^0.12.7",
     "react": "^17.0.1",
     "react-awesome-button": "^6.5.1",
     "react-dom": "^17.0.1",
@@ -28,10 +21,13 @@
     "sweetalert2": "^10.15.5",
     "web-vitals": "^1.1.0"
   },
+  "proxy": "http://localhost:3001",
   "scripts": {
-    "heroku-postbuild": "cd client && npm install --only=dev --no-shrinkwrap && npm run build",
-    "start": "node server.js",
-    "dev": "env-cmd -f ./config/dev.env nodemon server.js"
+    "start": "react-scripts.js start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "dev": "env-cmd -f ./config/dev.env nodemon src/backend/server.js"
   },
   "eslintConfig": {
     "extends": [
@@ -51,7 +47,6 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:3001",
   "devDependencies": {
     "env-cmd": "^10.1.0"
   }
