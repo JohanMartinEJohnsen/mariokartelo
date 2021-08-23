@@ -94,7 +94,7 @@ function updateScoresOnServer(users, org_users){
   const numPlayers = users.length
   for (var player = 0; player < numPlayers; player++){
     var url = '/users/' + users[player].name
-    axios.patch(url, {rating: users[player].rating, races: org_users[player].races + 1})
+    axios.patch(url, {rating: users[player].rating, races: users[player].races + 1})
   }
   
 }
