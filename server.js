@@ -8,7 +8,7 @@ const userRouter = require('./src/routers/user')
 
 const app = express()
 const port = process.env.PORT 
-const whitelist = ['http://localhost:3001', 'https://start-mariocartelo.herokuapp.com']
+const whitelist = ['http://localhost:3001', 'https://start-mariocartelo.herokuapp.com', 'http://start-mariocartelo.herokuapp.com']
 app.use(express.json())
 
 

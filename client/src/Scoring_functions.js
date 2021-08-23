@@ -155,7 +155,7 @@ function CreateDictionaryWithScores(players, users){
     const player = players[i]
     for (var j = 0; j < users.length; j++){
       if (users[j].name === player){
-        UsersWithScore.push({ "name": users[j].name, 'rating': users[j].rating})
+        UsersWithScore.push({ "name": users[j].name, 'rating': users[j].rating, 'races': users[j].races})
       }
 
     }

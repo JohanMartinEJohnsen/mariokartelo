@@ -73,7 +73,7 @@ function RegisterGame(users){
     answers.push(names[result.value[3]]);
 
     var updated_scores = updateScore(answers, users)
-    updateScoresOnServer(updated_scores, users)
+    updateScoresOnServer(updated_scores)
     console.log('updated_scores: ' + updated_scores)
 
     const string= JSON.stringify(answers);
@@ -90,13 +90,11 @@ function RegisterGame(users){
 })
 }
 
-function updateScoresOnServer(users, org_users){
+function updateScoresOnServer(users){
   const numPlayers = users.length
   for (var player = 0; player < numPlayers; player++){
     var url = '/users/' + users[player].name
-    let num_races = org_users[player].races + 1
-    console.log('num_races:' + num_races)
-    axios.patch(url, {rating: users[player].rating, races: num_races})
+    axios.patch(url, {rating: users[player].rating, races: users[player].races + 1})
   }
   
 }
