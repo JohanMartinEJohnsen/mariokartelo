@@ -8,17 +8,12 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
-//import members from "../data/MOCK_DATA.json";
-//import {orderBy} from "lodash/orderBy";
-//import TableSortLabel from '@material-ui/core/TableSortLabel';
 
 
 function ScoreBoard({users}){
   const classes = useStyles();
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
-  //const [columnToSort, setColumnToSort]= React.useState("")
-  //const [sortDirection, setSortDirection]= React.useState("desc");
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -90,7 +85,6 @@ function ScoreBoard({users}){
   );
 }
 
-
 const columns = [
     { id:'picture', label:'Picture' , minWidth: 50},
   { id: 'name', label: 'Name', minWidth: 100 },
@@ -107,15 +101,9 @@ const columns = [
 
 function createData(users){
     const rows=[];
-    users.map((val, key) => {
-        rows.push(val)
-
-    })
-    return ( 
-        rows
-    );
+    users.map((val, key) => {rows.push(val)})
+    return rows
 }
-
 
 const useStyles = makeStyles({
 
@@ -126,55 +114,6 @@ const useStyles = makeStyles({
     maxHeight: 440,
   },
 });
-
-
-
-// Function for sorting feature
-function descendingComparator(a, b, orderBy) {
-  if (b[orderBy] < a[orderBy]) {
-    return -1;
-  }
-  if (b[orderBy] > a[orderBy]) {
-    return 1;
-  }
-  return 0;
-}
-// function getComparator(order, orderBy) {
-//   return order === "desc"
-//     ? (a, b) => descendingComparator(a, b, orderBy)
-//     : (a, b) => -descendingComparator(a, b, orderBy);
-// }
-// function stableSort(array, comparator) {
-//   const stabilizedThis = array.map((el, index) => [el, index]);
-//   stabilizedThis.sort((a, b) => {
-//     const order = comparator(a[0], b[0]);
-//     if (order !== 0) return order;
-//     return a[1] - b[1];
-//   });
-//   return stabilizedThis.map(el => el[0]);
-// }
-// const headCells = [
-//   {
-//     id: "name",
-//     label: "name"
-//   },
-//   { id: "age", numeric: true, label: "age" }
-// ];
-// function EnhancedTableHead(props) {
-//   const {
-//     classes,
-//     onSelectAllClick,
-//     order,
-//     orderBy,
-//     numSelected,
-//     rowCount,
-//     onRequestSort
-//   } = props;
-//   const createSortHandler = property => event => {
-//     onRequestSort(event, property);
-//   };
-// }
-
 
 export default ScoreBoard;
 
