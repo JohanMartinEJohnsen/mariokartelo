@@ -26,10 +26,12 @@ This is an react app runnning with a node backend. The project users a mongodb s
 - Download and install node.js
 - run npm install package.json file (install everything needed)
 - create and start a mongoose server (https://mongoosejs.com/)
-- Create a config folder in the root directory where you add a dev.env file.
+- Create a config folder in the root directory where you add a dev.env file. (google javascript env file for example)
    - Add PORT and MONGODB_URL to this file and set those values
+   - Set PORT to 3001 (this is only for local development purposes)
+   - The MONGODB_URL is given by you mongoose server or can be found in the heroku config/the mongoDB website
 - run npm run dev from the root directory in order to start the dev server.
-- run "npm start" in order to start the frontend.
+- Start another terminal, cd into the client folder and run "npm start" in order to start the frontend.
 
 
 ## Our system

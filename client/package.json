@@ -9,6 +9,7 @@
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.1",
     "axios": "^0.21.1",
+    "create-react-app": "^4.0.3",
     "elo-rating": "^1.0.1",
     "graphql": "^15.5.0",
     "kerberos": "^1.1.6",
