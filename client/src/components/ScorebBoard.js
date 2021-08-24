@@ -30,6 +30,10 @@ function ScoreBoard({users}){
   };
   const rows = createData(users);
   console.log(rows)
+  const sortedRow= rows.sort(function(a,b){
+    return (b.rating - a.rating);
+  });
+  console.log(sortedRow);
   return (
       <div className="scoreBoardWrapper"> 
         
