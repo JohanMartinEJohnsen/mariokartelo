@@ -24,6 +24,7 @@ class App extends Component {
         <ScoreBoard className="scoreBoard" users={this.state.users}/>
         <Button users={this.state.users}/>
         <Footer/>
+      
       </div>
       );
   } 
